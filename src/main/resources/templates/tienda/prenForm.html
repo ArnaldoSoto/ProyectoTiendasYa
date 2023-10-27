@@ -1,0 +1,99 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<head th:replace="layouts/base-layout :: head"></head>
+
+<body>
+	<nav th:replace="layouts/base-layout2 :: nav"></nav>
+	    <div class="product-big-title-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="product-bit-title text-center">
+                        <h2>Mi Panel</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	 <div class="single-product-area">
+        <div class="zigzag-bottom"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="single-sidebar">
+                        <h2 class="sidebar-title">Mi Panel</h2>
+                        <ul>
+                            <li><a th:href="@{/tienda/mi-panel}">Mi Perfil</a></li>
+                            <li class="active"><a th:href="@{/tienda/pren-form}">Productos</a></li>
+                            <li><a href="">Visitas</a></li>
+                            <li><a href="">Informacion</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-10">
+
+                    <div class="product-content-right">
+                        <div class="product-breadcroumb">
+                            <a href="#">Mi Panel</a>
+                            <a href="#">Gestion</a>
+                            <a href="#">Prendas</a>
+                        </div>
+			<div >
+				<div >
+				<h1 class="text-center" >Registrar Prendas al Catalogo</h1>
+				<div class="col-4 ">
+				<div class="alert alert-success text-center" th:if="${prenGuardada}" th:text="${prenGuardada}"></div>
+				<form th:action="@{/tienda/save-pren}" th:object="${prenda}" method="POST" enctype="multipart/form-data">
+					<div class="form-group my-2 font-weight-bold">
+					<label>Titulo:</label>
+					<input type="text" th:field="*{titulo}" class="form-control" />
+					</div>
+					<div class="form-group my-2 font-weight-bold">
+					<label>Descripcion:</label>
+					<textArea th:field="*{descripcion}" class="form-control" ></textArea>
+					</div>	
+					<div class="form-group my-2">
+						<label>Portada:</label>
+						<input type="file" name="file" class="form-control"  />
+					</div>
+					
+					<div class="form-group my-2">
+						<label>Precio:</label>
+						<input type="number" th:field="*{precio}" class="form-control" />
+					</div>
+					
+					<div class="form-group my-2">
+						<label>Stock:</label>
+						<input type="number" th:field="*{stock}" class="form-control" />
+					</div>
+					
+					
+					<div class="form-group my-2">
+						<label>Categoria:</label>					
+						<select class="form-control" name="id" id="id">
+							<option selected>Seleccione</option>
+							<option th:each="option : ${listaSubcategoria}" th:value="${option.id}" th:text="${option.nombre}"></option>
+						</select>
+					</div>	
+					
+					<div class="form-group my-4">	
+						<button type="submit" class="form-control btn btn-success">Guardar</button>
+					</div>
+				</form>
+							</div>
+						</div>
+					
+					</div>
+                        <div class="related-products-wrapper">
+                            <h2 class="related-products-title">a</h2>
+                            <div class="related-products-carousel">
+                            </div>
+                         </div> 
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+	<footer th:replace="layouts/base-layout :: footer"></footer>
+</body>
+</html>

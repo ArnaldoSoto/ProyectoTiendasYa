@@ -1,0 +1,165 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<head th:replace="layouts/base-layout :: head"></head>
+
+<body>
+	
+	<nav th:replace="layouts/base-layout :: nav"></nav>
+	
+	
+    
+
+    
+    <div class="product-big-title-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="product-bit-title text-center">
+                        <h2>Detalle de la ropa</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="single-product-area">
+        <div class="zigzag-bottom"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="single-sidebar">
+                        <h2 class="sidebar-title">Buscar Ropa</h2>
+                        <form action="">
+                            <input type="text" placeholder="Buscar...">
+                            <input type="submit" value="Buscar">
+                        </form>
+                    </div>
+                    <!-- 
+                    <div class="single-sidebar">
+                        <h2 class="sidebar-title">Destacados</h2>
+                        <div class="thubmnail-recent">
+                            <img src="temporal/ropahombre/pantalon4.jpg" class="recent-thumb" alt="">
+                            <img src="temporal/ropaninos/polos1.jpg" alt="">
+                            <h2><a href="">Pantalon Beach Dril</a></h2>
+                            <div class="product-sidebar-price">
+                                <ins>$20.00</ins> 
+                            </div>                             
+                        </div>
+                        <div class="thubmnail-recent">
+                            <img src="temporal/ropaninos/polos1.jpg" class="recent-thumb" alt="">
+                            <h2><a href="">Sony Smart TV - 2015</a></h2>
+                            <div class="product-sidebar-price">
+                                <ins>$700.00</ins> <del>$100.00</del>
+                            </div>                             
+                        </div>
+                        <div class="thubmnail-recent">
+                            <img src="img/product-thumb-1.jpg" class="recent-thumb" alt="">
+                            <h2><a href="">Sony Smart TV - 2015</a></h2>
+                            <div class="product-sidebar-price">
+                                <ins>$700.00</ins> <del>$100.00</del>
+                            </div>                             
+                        </div>
+                        <div class="thubmnail-recent">
+                            <img src="img/product-thumb-1.jpg" class="recent-thumb" alt="">
+                            <h2><a href="">Sony Smart TV - 2015</a></h2>
+                            <div class="product-sidebar-price">
+                                <ins>$700.00</ins> <del>$100.00</del>
+                            </div>                             
+                        </div>
+                    </div>
+                     -->
+                     
+                     
+                    <div class="single-sidebar">
+                        <h2 class="sidebar-title">Mas Categorias</h2>
+                        <ul>
+                            <li><a href="">Camisas</a></li>
+                            <li><a href="">Casacas</a></li>
+                            <li><a href="">Pantalones</a></li>
+                            <li><a href="">Polos</a></li>
+                            <li><a href="">Bermudas</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-8">
+                    <div class="product-content-right">
+                        <div class="product-breadcroumb">
+                            <a href="">Home</a>
+                            <a href="">Ropa Hombres</a>
+                            <a href="">Detalle</a>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="product-images">
+                                    <div class="product-main-img">
+                                        <img th:src="@{'/uploads/'+${prenda.portada}}" th:alt="${prenda.portada}" 
+            							style="border-top-left-radius: 15px; border-top-right-radius: 15px;" class="img-fluid" />
+                                    </div>                                                                      
+
+                                </div>
+                            </div>
+                            
+                            <div class="col-sm-6">
+                                <div class="product-inner">
+                                    <h2 class="product-name"><span class="text-dark" th:text="${prenda.titulo}" ></span></h2>
+                                    
+                                    <div class="d-flex justify-content-between">
+						            <p class="text-dark">Descripcion: </p> 
+						              <p class="text-dark"><span th:text="${prenda.descripcion}" ></span></p>
+						            </div>
+						            <div class="card-body pb-0">
+						            <div class="d-flex justify-content-between">
+						            <p class="text-dark"></p>
+						            <h1 class="text-dark fw-bold fs-2">$ <span th:text="${prenda.precio}" ></span></h1>
+						            </div>  
+                                    <div class="d-flex justify-content-between">
+						            
+						              <p class="text-dark">Disponibles: <span th:text="${prenda.stock}" ></span></p>
+						            </div>   
+                                    
+                                    <div class="product-inner-category">
+                                        <p>Categoria: <a href="">Ropa Hombre</a> </p>
+                                    </div> 
+                                    
+                                    <div role="tabpanel">
+                                        <ul class="product-tab" role="tablist">
+                                            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Informacion Adicional</a></li>
+                                            
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div role="tabpanel" class="tab-pane fade in active" id="home">
+                                                <h2>Tienda: <span> Sport Strem</span>  </h2> 
+                                                <h2 class="text-dark">Dirreccion: <span >Av. Lima 456 La Victoria</span></h2>
+
+                                                <h2 class="text-dark">WhatsApp: <span >957 801 256</span></h2>
+                                            </div>
+                                            <div class="product-bit-title text-center ">
+						                   		 <br>
+						                      <a href="#"class="text-dark text-center btn btn-success fw-bold">Mas del Vendedor</a> </div>
+						               			<br>                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>                       
+                        
+
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   </div>
+	
+	
+	
+	
+	
+	
+	<footer th:replace="layouts/base-layout :: footer"></footer>
+</body>
+</html>

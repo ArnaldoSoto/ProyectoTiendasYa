@@ -1,0 +1,491 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<head th:replace="layouts/base-layout :: head"></head>
+
+<body>
+	
+	<nav th:replace="layouts/base-layout :: nav"></nav>
+	<!-- BUSCADOR
+	<div class="alert alert-success text-center" th:if="${ventaGuardado!=null}" th:text="${ventaGuardado}"></div>
+	<div class="alert alert-success text-center" th:if="${ventaModificado!=null}" th:text="${ventaModificado}"></div>
+	<div class="alert alert-success text-center" th:if="${ventaEliminado!=null}" th:text="${ventaEliminado}"></div>
+	 -->
+	
+	<!-- BUSCADOR
+	<div th:replace="layouts/searchForm :: search-form"></div>	
+	<!-- Carito -->
+	  
+    
+
+    
+    <div class="slider-area">
+        	<!-- Slider -->
+			<div class="block-slider block-slider4">
+				<ul class="" id="bxslider-home4">
+					<li>
+						<img src="img/tiendaropa.png" alt="Slide">
+						<div class="caption-group">
+							<h2 class="caption title">
+								 Anunciate <span class="primary"><strong>Aqui</strong></span>
+							</h2>
+							<h4 class="caption subtitle">En 2 simples pasos</h4>
+							<a class="caption button-radius" href="#"><span class="icon"></span>Registrarme</a>
+						</div>
+					</li>
+					<li><img src="img/categoriamujer.jpg" alt="Slide">
+						<div class="caption-group">
+							<h2 class="caption title">
+								Para Damas <span class="primary">50% <strong>off</strong></span>
+							</h2>
+							<h4 class="caption subtitle">con la mejor calidad</h4>
+							<a class="caption button-radius" href="#"><span class="icon"></span>Ver Mas</a>
+						</div><!--1163*370-->
+					</li>
+					<li><img src="img/h4-slide3.png" alt="Slide">
+						<div class="caption-group">
+							<h2 class="caption title">
+								Apple <span class="primary">Store <strong>Ipod</strong></span>
+							</h2>
+							<h4 class="caption subtitle">Select Item</h4>
+							<a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
+						</div>
+					</li>
+					<li><img src="img/h4-slide4.png" alt="Slide">
+						<div class="caption-group">
+						  <h2 class="caption title">
+								Apple <span class="primary">Store <strong>Ipod</strong></span>
+							</h2>
+							<h4 class="caption subtitle">& Phone</h4>
+							<a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- ./Slider -->
+    </div> <!-- End slider area -->
+    
+     <div class="product-big-title-area col-md-12">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="product-bit-title text-center">
+                        <h2>TIENDA ONLINE - ROPA DE MODA</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+   <div class=" col-md-12">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="product-bit-title text-center">
+                       <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div class="promo-area">
+        <div class="zigzag-bottom"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="single-promo promo1">
+                        <i class="fa fa-refresh"></i>
+                        <p>30 Dias sin comision</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="single-promo promo2">
+                        <i class="fa fa-truck"></i>
+                        <p>Entregas</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="single-promo promo3">
+                        <i class="fa fa-lock"></i>
+                        <p>Seguridad </p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="single-promo promo4">
+                        <i class="fa fa-gift"></i>
+                        <p>Nuevos Productos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End promo area -->
+    
+
+    
+    <!-- Seccion ropa Mujer -->
+    <div class="maincontent-area">
+        <div class="zigzag-bottom"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="latest-product">
+                        <h2 class="section-title">Ropa para Damas</h2>
+                        
+                        <h4 class="text-center">ROPA PARA MUJER– Noviembre 2023</h4>
+                        <div class="product-carousel">
+                            <div class="single-product">
+                                <div class="product-f-image">
+                                    <img src="temporal/ropamujer/blusa1.jpg" alt="">
+                                    <div class="product-hover">                                        
+                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> Ver Detalles</a>
+                                    </div>
+                                </div>
+                                
+                                <h2><a href="single-product.html">Blusa Azul Hans</a></h2>
+                                
+                                <div class="product-carousel-price">
+                                    <ins>$30.00</ins>  
+                                    <span > Disponibles 15</span>
+                                </div> 
+                            </div>
+                            <div class="single-product">
+                                <div class="product-f-image">
+                                    <img src="temporal/ropamujer/casaca3.jpg" alt="">
+                                    <div class="product-hover">
+                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> Ver Detalles</a>
+                                    </div>
+                                </div>
+                                
+                                <h2>Casaca sin Mangas bage</h2>
+                                <div class="product-carousel-price">
+                                    <ins>$35.5</ins> <del>$40.00</del>
+                                    <span > Disponibles 4</span>
+                                </div> 
+                            </div>
+                            <div class="single-product">
+                                <div class="product-f-image">
+                                    <img src="temporal/ropamujer/vestido3.jpg" alt="">
+                                    <div class="product-hover">
+                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> Ver Detalles</a>
+                                    </div>
+                                </div>
+                                
+                                <h2>Vestido Celeste poliester</h2>
+                                <div class="product-carousel-price">
+                                    <ins>$25.5</ins> 
+                                    <span > Disponibles 10</span>
+                                </div> 
+                            </div>
+                            <div class="single-product">
+                                <div class="product-f-image">
+                                    <img src="temporal/ropamujer/polera1.jpg" alt="">
+                                    <div class="product-hover">
+                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> Ver Detalles</a>
+                                    </div>
+                                </div>
+                                
+                                <h2>Polera celeste cielo</h2>
+                                <div class="product-carousel-price">
+                                    <ins>$19.9</ins> 
+                                    <span > Disponibles 30</span>
+                                </div> 
+                            </div>
+                            <div class="single-product">
+                                <div class="product-f-image">
+                                    <img src="temporal/ropamujer/vestido2.jpg" alt="">
+                                    <div class="product-hover">
+                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> Ver Detalles</a>
+                                    </div>
+                                </div>
+                                
+                                <h2>Vestido Azul Marino</h2>
+                                <div class="product-carousel-price">
+                                    <ins>$25.9</ins> 
+                                    <span > Disponibles 15</span>
+                                </div> 
+                            </div>
+                             <div class="single-product">
+                                <div class="product-f-image">
+                                    <img src="temporal/ropamujer/jeans2.jpg" alt="">
+                                    <div class="product-hover">
+                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> Ver Detalles</a>
+                                    </div>
+                                </div>
+                                
+                                <h2>Jeans Claro Sara</h2>
+                                <div class="product-carousel-price">
+                                    <ins>$75.9</ins> 
+                                    <span > Disponibles 25</span>
+                                </div> 
+                            </div>
+                            
+                        </div>
+                       <div class="product-bit-title text-center ">
+                   		 <br>
+                      <a th:href="@{/}"class="text-dark text-center btn btn-success fw-bold">Ver Catalogo Completo</a> </div>
+               			
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End main content area -->
+    <!-- ropa hombre -->
+    <div class="maincontent-area">
+        <div class="zigzag-bottom"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="latest-product">
+                        <h2 class="section-title">Ropa para Hombres</h2>
+                        <h4 class="text-center">ROPA PARA CABALLERO– Noviembre 2023</h4>
+                        <div class="product-carousel">
+                            <div class="single-product" th:each="item : ${prendas}">
+                                <div class="product-f-image">
+                                  <img th:src="@{'/uploads/'+${item.portada}}" 
+									class="img-fluid imDg " style="border-top-left-radius: 15px; border-top-right-radius: 15px;"/>
+					
+                                   <!-- <img src="img/product-1.jpg" alt="">  --> 
+                                    <div class="product-hover">                                        
+                                        <a th:href="@{/prendas/ver-prenda/} +${item.id}" class="view-details-link"><i class="fa fa-link"></i> Ver Detalles</a>
+                                    </div>
+                                </div>
+                                <div class="letra-conta  font-weight-bold">
+								<!-- Nombres de articulo -->
+								<h2><a href="single-product.html"><span  th:text="${item.titulo}"></span></a></h2>
+								
+								</div>
+                                <div class="product-carousel-price letra-contra">
+                                   <ins> <span >$. <span th:text="${item.precio}"></span></span></ins>
+                                   <span > Disponibles <span th:text="${item.stock}"></span></span>
+                                   
+                                </div> 
+                            </div>
+                            
+                            <div class="single-product">
+                                <div class="product-f-image">
+                                    <img src="temporal/ropahombre/camisa2.jpg" alt="">
+                                    <div class="product-hover">
+                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> Ver Detalles</a>
+                                    </div>
+                                </div>
+                                
+                                <h2>Camisa Cuadros Rojo</h2>
+                                <div class="product-carousel-price">
+                                    <ins>$27.9</ins> 
+                                    <span > Disponibles 10</span>
+                                </div> 
+                            </div>
+                            <div class="single-product">
+                                <div class="product-f-image">
+                                    <img src="temporal/ropahombre/chompa4.jpg" alt="">
+                                    <div class="product-hover">
+                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> Ver Detalles</a>
+                                    </div>
+                                </div>
+                                
+                                <h2>Polera Adavanse polar</h2>
+                                <div class="product-carousel-price">
+                                    <ins>$30.0</ins> 
+                                    <span > Disponibles 20</span>
+                                </div> 
+                            </div>
+                            <div class="single-product">
+                                <div class="product-f-image">
+                                    <img src="temporal/ropahombre/polo1.jpg" alt="">
+                                    <div class="product-hover">
+                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> Ver Detalles</a>
+                                    </div>
+                                </div>
+                                
+                                <h2>Polo Azul Drift</h2>
+                                <div class="product-carousel-price">
+                                    <ins>$29.9</ins> 
+                                    <span > Disponibles 30</span>
+                                </div>                             
+                            
+                                                   
+                            </div>
+                        </div>
+                        <div class="product-bit-title text-center ">
+                   		 <br>
+                      <a th:href="@{/}"class="text-dark text-center btn btn-success fw-bold">Ver Catalogo Completo</a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End main content area -->
+    <!-- Ropa para niños -->
+        <div class="maincontent-area">
+        <div class="zigzag-bottom"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="latest-product">
+                        <h2 class="section-title">Ropa para Niños</h2>
+                        <h4 class="text-center">ROPA PARA Niños– Noviembre 2023</h4>
+                        <div class="product-carousel">
+                        
+                        	<div class="single-product">
+                                <div class="product-f-image">
+                                    <img src="temporal/ropaninos/polos1.jpg" alt="">
+                                    <div class="product-hover">
+                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> Ver Detalles</a>
+                                    </div>
+                                </div>
+                                
+                                <h2>Polo Azul Niñas gato</h2>
+                                <div class="product-carousel-price">
+                                    <ins>$15.9</ins> 
+                                    <span > Disponibles 9</span>
+                                </div> 
+                            </div>
+                            <div class="single-product">
+                                <div class="product-f-image">
+                                    <img src="temporal/ropaninos/pantalon1.jpg" alt="">
+                                    <div class="product-hover">
+                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> Ver Detalles</a>
+                                    </div>
+                                </div>
+                                
+                                <h2>Buzo sport Gris niños</h2>
+                                <div class="product-carousel-price">
+                                    <ins>$ 9.0</ins> 
+                                    <span > Disponibles 9</span>
+                                </div> 
+                            </div>
+                            <div class="single-product">
+                                <div class="product-f-image">
+                                    <img src="temporal/ropaninos/vestido4.jpg" alt="">
+                                    <div class="product-hover">
+                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> Ver Detalles</a>
+                                    </div>
+                                </div>
+                                
+                                <h2>Vestido Rosa gris 10</h2>
+                                <div class="product-carousel-price">
+                                    <ins>$ 40.0</ins> 
+                                    <span > Disponibles 20</span>
+                                </div> 
+                            </div>
+                            <div class="single-product">
+                                <div class="product-f-image">
+                                    <img src="temporal/ropaninos/casaca2.jpg" alt="">
+                                    <div class="product-hover">
+                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> Ver Detalles</a>
+                                    </div>
+                                </div>
+                                
+                                <h2>Casaca Marvel Niño 10</h2>
+                                <div class="product-carousel-price">
+                                    <ins>$ 20.0</ins> 
+                                    <span > Disponibles 19</span>
+                                </div> 
+                            </div>
+                            <div class="single-product">
+                                <div class="product-f-image">
+                                    <img src="temporal/ropaninos/jeans2.jpg" alt="">
+                                    <div class="product-hover">
+                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> Ver Detalles</a>
+                                    </div>
+                                </div>
+                                
+                                <h2>Jeans blanco Dril mr</h2>
+                                <div class="product-carousel-price">
+                                    <ins>$ 20.0</ins> 
+                                    <span > Disponibles 10</span>
+                                </div> 
+                            </div>
+                            <div class="single-product">
+                                <div class="product-f-image">
+                                    <img src="temporal/ropaninos/pantalon2.jpg" alt="">
+                                    <div class="product-hover">
+                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> Ver Detalles</a>
+                                    </div>
+                                </div>
+                                
+                                <h2>Pantalon Roza cuadros</h2>
+                                <div class="product-carousel-price">
+                                    <ins>$ 19.9</ins> 
+                                    <span > Disponibles 30</span>
+                                </div> 
+                            </div>
+                        
+                        
+                        </div>
+                        <div class="product-bit-title text-center ">
+                   		 <br>
+                      <a th:href="@{/}"class="text-dark text-center btn btn-success fw-bold">Ver Catalogo Completo</a> </div>
+               			<br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End main content area -->
+    <div class="brands-area">
+        <div class="zigzag-bottom"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="brand-wrapper">
+                        <div class="brand-list">
+                            <img src="img/parnet1.png" width="50%" alt="">
+                            <img src="img/parnet2.png" width="50px"  alt="">
+                            <img src="img/parnet3.png" alt="">
+                            <img src="img/parnet4.png" alt="">
+                            <img src="img/parnet5.png" alt="">                            
+                       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End brands area -->
+
+	<div class="product-big-title-area col-md-12">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="product-bit-title ">
+                        <h2 class="text-center">Anucia tu tienda con nosotros</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="product-big-title-area col-md-12">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="product-bit-title ">
+                        <h5 class="text-center">Nuestro propósito es que puedas atraer un gran número de visitantes a tu tienda en línea y
+                         </h5>
+                    	<h5 class="text-center"> no tengas que ser un experto en SEO y posicionamiento orgánico, muchos menos gastar miles de dólares en campañas </h5>
+                    	<h5 class="text-center">de anuncios. Estamos para ahorrarte la parte difícil de todo esto.</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-big-title-area col-md-12">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="product-bit-title text-center ">
+                    <br>
+                      <a th:href="@{/}"class="text-dark text-center btn btn-success fw-bold">Registrar mi tienda</a> </div>
+               		<h1></h1>
+               		<br>
+               		<br>
+               		
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+ 
+	<footer th:replace="layouts/base-layout :: footer"></footer>
+
+	
+</body>
+</html>

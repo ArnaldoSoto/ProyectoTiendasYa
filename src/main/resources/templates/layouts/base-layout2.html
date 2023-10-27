@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/extras/spring-security">
+<head th:fragment="head">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TiendasOline</title>
+	<!-- Google Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,100" rel="stylesheet">    
+    <!-- Bootstrap --> 
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">   
+    <!-- Font Awesome -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/font-awesome.min.css}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" th:href="@{/css/owl.carousel.css}">
+
+    <link rel="stylesheet" th:href="@{/css/responsive.css}">    
+
+	
+	<!-- Bootstrap JS from CDN -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery.min.js"></script>
+
+
+	<!-- jQuery sticky menu -->
+	<script th:src="@{/js/owl.carousel.min.js}"></script>
+	<script th:src="@{/js/jquery.sticky.js}"></script>	
+	<!-- jQuery easing -->
+	<script th:src="@{/js/jquery.easing.1.3.min.js}"></script>	
+	<!-- Main Script  funciona correctamente *-->
+	<script th:src="@{/js/main.js}"></script>
+	<!-- CSS -->	
+
+<!-- FONTAWESOME 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+ integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" 
+crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+</head>
+<body>
+	<nav th:fragment="nav" class="navbar navbar-expand-lg navbar-dark">
+		<div class="header-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="user-menu">
+                        <ul>
+                            <li><a th:href="@{/tienda/mi-panel}"><i class="fa fa-user"></i> My Panel</a></li>
+                            <li><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li>
+                            <li><a href="cart.html"><i class="fa fa-user"></i> Config</a></li>
+                            <li><a th:href="@{/usuario/registro}"><i class="fa fa-user"></i> Registrar</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                
+                <div class="col-md-4">
+                    <div class="header-right">
+                        <ul class="list-unstyled list-inline">
+                            <li class="dropdown dropdown-small">
+                                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">Moneda :</span><span class="value">SOL </span><b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">SOL</a></li>
+                                    <li><a href="#">USD</a></li>
+                                    <li><a href="#">EURO</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown dropdown-small">
+                                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">Lenguaje :</span><span class="value">Español </span><b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Español</a></li>
+                                    <li><a href="#">Aleman</a></li>
+                                    <li><a href="#">Ingles</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End header area -->
+    <div class="site-branding-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="logo">
+                        <h1><a href="./"><img th:src="@{/img/logo.jpg}" alt="MDN"></a></h1></div>
+                </div>			
+				
+				<!-- CIERRE DE SESIÓN -->
+				<form sec:authorize="isAuthenticated()" th:action="@{/logout}" method="POST">
+					<button type="submit" class="btn btn-dark mb-lg-2">Cerrar Sesión</button>
+				</form>
+                
+                <!-- cARRO DE COMPRA
+                <div class="col-sm-6">
+                    <div class="shopping-item">
+                        <a href="cart.html">Cart - <span class="cart-amunt">$100</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div> <!-- End site branding area -->
+    <!--Menu -->
+        <div class="mainmenu-area">
+        <div class="container">
+            <div class="row">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div> 
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a th:href="@{/}">Home</a></li>                        
+                        <li><a th:href="@{/mujeres}">Ropa Mujer</a></li>
+                        <li><a th:href="@{/hombres}">Ropa Hombre</a></li>
+                        <li><a th:href="@{/ninos}">Ropa Niños</a></li>                        
+                        <li><a href="#">Contactos</a></li>
+                    </ul>
+                    
+                </div>  
+            </div>
+        </div>
+    </div> <!-- End mainmenu area -->
+    <!-- 
+		<div class="container-fluid mb-lg-2">
+			<a class="navbar-brand  mb-0 h1"> &nbsp NAMELOGO</a>			
+			
+			
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me+5">
+					<li class="nav-item">
+					<a class="nav-link h5"aria-current="page" th:href="@{/}">Home</a>
+					</li>									
+					<li class="nav-item"><a class="nav-link h5 .font-weight-bold"
+						aria-current="page" th:href="@{/usuario/registro}">Ropa Hombre</a>
+					</li>
+					<li class="nav-item"><a class="nav-link h5"
+						aria-current="page" th:href="@{/usuario/registro}">Ropa Mujer</a>
+					</li>
+					<li class="nav-item"><a class="nav-link h5"
+						aria-current="page" th:href="@{/usuario/registro}">Ropa Ninos</a>
+					</li>				
+					<!-- <li class="nav-item"><a class="nav-link active"
+						aria-current="page" th:href="@{/admin/arti-form}" sec:authorize="hasRole('ROLE_ADMIN')">Articulos</a>
+					</li>
+					
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" th:href="@{/admin/gestion-articulos}" sec:authorize="hasRole('ROLE_ADMIN')">Gestion</a>
+					</li>
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" th:href="@{/admin/gestion-usuarios}" sec:authorize="hasRole('ROLE_ADMIN')">Usuarios</a>						
+					</li>
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" th:href="@{/vender/}" sec:authorize="hasRole('ROLE_ADMIN')">Vender</a>					
+					</li>
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" th:href="@{/listadoventas/}" sec:authorize="hasRole('ROLE_ADMIN')">Ventas</a>						
+					</li>
+										
+							-->
+					<!--an  mas cosas-->
+							
+					<!--  
+					
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" th:href="@{/usuario/registro}">Registrar</a>
+					</li>
+					
+					<li class="nav-item mb-lg-2"><a class="nav-link active "
+						aria-current="page" th:href="@{/login}" sec:authorize="!isAuthenticated()">Iniciar Sesion</a>
+					</li>
+					-->
+			<!--  	</ul>
+				
+				<a aria-current="page" th:href="@{/login}" class="badge badge-dark" sec:authorize="!isAuthenticated()">Mi Panel</a>				
+				
+				<!-- MENSAJE DE BIENVENIDA -->
+			<!-- 	<div th:if="${username != null}" th:text="${username}" class="btn btn-info mb-lg-4"></div>
+				
+				
+				<!-- CIERRE DE SESIÓN -->
+			<!-- 	<form sec:authorize="isAuthenticated()" th:action="@{/logout}" method="POST">
+					<button type="submit" class="btn btn-dark mb-lg-2">Cerrar Sesión</button>
+				</form>
+				
+				&nbsp &nbsp &nbsp &nbsp
+				
+				
+
+			</div>
+		</div> -->
+	</nav>
+	 <footer>
+    <div class="footer-top-area">
+        <div class="zigzag-bottom"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="footer-about-us">
+                        <h2>u<span>Stora</span></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis magni at?</p>
+                        <div class="footer-social">
+                            <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                            <a href="#" target="_blank"><i class="fa fa-youtube"></i></a>
+                            <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-sm-6">
+                    <div class="footer-menu">
+                        <h2 class="footer-wid-title">Navegacion </h2>
+                        <ul>
+                            <li><a href="#">Mi Panel</a></li>
+                            <li><a href="#">Iniciar Sesion</a></li>
+                            <li><a href="#">Wishlist</a></li>
+                            <li><a href="#">Contactos</a></li>
+                            <li><a href="#">Acerda de</a></li>
+                        </ul>                        
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-sm-6">
+                    <div class="footer-menu">
+                        <h2 class="footer-wid-title">Categorias</h2>
+                        <ul>
+                            <li><a href="#">Ropa Hombre</a></li>
+                            <li><a href="#">Ropa Mujer</a></li>
+                            <li><a href="#">Ropa Niños</a></li>
+                            <li><a href="#">Calzados</a></li>
+                            <li><a href="#">Mas</a></li>
+                        </ul>                        
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-sm-6">
+                    <div class="footer-newsletter">
+                        <h2 class="footer-wid-title">Contactos</h2>
+                        <p>Suscríbase a nuestro boletín y obtenga ofertas exclusivas que no encontrará en ningún otro lugar directamente en su bandeja de entrada.</p>
+                        <div class="newsletter-form">
+                            <form action="#">
+                                <input type="email" placeholder="Escriba su Correo">
+                                <input type="submit" value="Suscribirse">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End footer top area -->
+    
+    <div class="footer-bottom-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="copyright">
+                        <p>&copy; 2023-ll ProyectoIntegrador Grupo7. All Rights Reserved. <a href="http://www.google.com" target="_blank">TiendasVirtuales.com</a></p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="footer-card-icon">
+                        <i class="fa fa-cc-discover"></i>
+                        <i class="fa fa-cc-mastercard"></i>
+                        <i class="fa fa-cc-paypal"></i>
+                        <i class="fa fa-cc-visa"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End footer bottom area -->
+
+	<!-- Slider -->
+    <script type="text/javascript" src="js/bxslider.min.js"></script>
+	<script type="text/javascript" src="js/script.slider.js"></script>
+	</footer>
+
+    
+</body>
+</html>

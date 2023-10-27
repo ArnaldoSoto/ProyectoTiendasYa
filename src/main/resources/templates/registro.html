@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head th:replace="layouts/base-layout :: head"></head>
+
+<body>
+
+	<nav th:replace="layouts/base-layout :: nav"></nav>
+	
+	<!-- MENSAJE FLASH -->
+	<div class="alert alert-danger text-center" th:if="${usuarioRepetido != null}" th:text="${usuarioRepetido}"></div>
+	<div class="alert alert-danger text-center" th:if="${camposVacios != null}" th:text="${camposVacios}"></div>
+	
+	<section class="vh-100 gradient-custom">
+	  <div class="container py-5 h-100">
+	    <div class="row d-flex justify-content-center align-items-center h-100">
+	      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+	        <div class="card bg-dark text-white" style="border-radius: 1rem;">
+	          <div class="card-body p-5 ">				
+	            <div class="mb-md-2 mt-md-4 pb-5 ">          
+				
+	              <h2 class="fw-bold mb-2 text-uppercase text-center">Registrar Tienda</h2>  
+	              <p class="small mb-4 text-center">Rellene con sus datos</p>          
+					<form th:action="@{/usuario/save}" method="POST">
+	              <div class="form-outline form-white mb-2 text-left">
+	              <label class="form-label" for="typeUserX">Usuario: </label>
+	                <input type="text" name="username" id="typeUserX" autocomplete="off"  class="form-control form-control-lg" />
+	                
+	              </div>
+	              <div class="form-outline form-white mb-2 text-left">
+	              <label class="form-label" for="typeEmailX">Email: </label>
+	                <input type="email" name="email" id="typeEmailX" autocomplete="off"  class="form-control form-control-lg" />
+	                
+	              </div>	
+	              <div class="form-outline form-white mb-2 text-left">
+	              <label class="form-label" for="typePasswordX ">Contraseña:</label>
+	                <input type="password" name="password" id="typePasswordX" autocomplete="off"  class="form-control form-control-lg" />
+	                
+	              </div>
+	              <div class="form-outline form-white mb-2 text-left">
+	              <label class="form-label" for="typeNombreX">Nombre: </label>
+	                <input type="text" name="nombre" id="typeNombreX" autocomplete="off"  class="form-control form-control-lg" />
+	                
+	              </div>
+	              <div class="form-outline form-white mb-2 text-left">
+	              <label class="form-label" for="typeApellidoX">Apellido: </label>
+	                <input type="text" name="apellido" id="typeApellidoX" autocomplete="off"  class="form-control form-control-lg" />
+	         
+	              </div>
+	              <div class="form-outline form-white mb-2 text-left">
+	              <label class="form-label" for="typeTiendaX">Nombre de Tienda: </label>
+	                <input type="text" name="tienda" id="typeTiendaX" autocomplete="off"  class="form-control form-control-lg" />
+	                
+	              </div>
+	              <div class="form-outline form-white mb-2 text-left">
+	              <label class="form-label" for="typeTelefonoX">Telefono: </label>
+	                <input type="number" name="telefono" id="typeTelefonoX" autocomplete="off"  class="form-control form-control-lg" />
+	             </div>	                    
+	
+	              <p class="small mb-2 pb-lg-4 text-center">Revise que sus datos se los correctos</p>
+					<div class="text-center">
+	              <button class="btn btn-outline-light btn-lg px-5 text-center" type="submit">Crear cuenta</button>  </div>          
+				</form>
+	            </div>
+	
+	            <div class="text-center">
+	              <p class="mb-4">Ya tienes cuenta? <a href="login.html" class="text-white-50 fw-bold ">Iniciar Sesion</a>
+	              </p>
+	            </div>
+	
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</section>
+	
+	<footer th:replace="layouts/base-layout :: footer"></footer>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head th:replace="layouts/base-layout :: head"></head>
+<body>
+		<div class="header-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="user-menu">
+                        <ul>
+                            <li><a th:href="@{/tienda/mi-panel}"><i class="fa fa-user"></i> My Panel</a></li>
+                            <li><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li>
+                            <li><a href="#"><i class="fa fa-user"></i> Config</a></li>
+                            <li><a th:href="@{/usuario/registro}"><i class="fa fa-user"></i> Registrar</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                
+                <div class="col-md-4">
+                    <div class="header-right">
+                        <ul class="list-unstyled list-inline">
+                            <li class="dropdown dropdown-small">
+                                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">Moneda :</span><span class="value">SOL </span><b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">SOL</a></li>
+                                    <li><a href="#">USD</a></li>
+                                    <li><a href="#">EURO</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown dropdown-small">
+                                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">Lenguaje :</span><span class="value">Español </span><b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Español</a></li>
+                                    <li><a href="#">Aleman</a></li>
+                                    <li><a href="#">Ingles</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End header area -->
+
+	    <div class="site-branding-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="logo">
+                        <h1><a href="./"><img th:src="@{/img/logo.jpg}" alt="MDN"></a></h1></div>
+                </div>
+                <!-- cARRO DE COMPRA
+                <div class="col-sm-6">
+                    <div class="shopping-item">
+                        <a href="cart.html">Cart - <span class="cart-amunt">$100</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div> <!-- End site branding area -->
+    <!--Menu -->
+        <div class="mainmenu-area">
+        <div class="container">
+            <div class="row">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div> 
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a th:href="@{/}">Home</a></li>                        
+                        <li><a th:href="@{/mujeres}">Ropa Mujer</a></li>
+                        <li><a th:href="@{/hombres}">Ropa Hombre</a></li>
+                        <li><a th:href="@{/ninos}">Ropa Niños</a></li>                                            
+                        <li><a href="#">Contactos</a></li>
+                    </ul>
+                    
+                </div>  
+            </div>
+        </div>
+    </div> <!-- End mainmenu area -->
+	<section class="vh-100 gradient-custom">
+	  <div class="container py-5 h-100">
+	    <div class="row d-flex justify-content-center align-items-center h-100">
+	      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+	        <div class="card bg-dark text-white" style="border-radius: 1rem;">
+	          <div class="card-body p-5 ">				
+	            <div class="mb-md-2 mt-md-4 pb-5">
+				<div class="alert alert-success text-center" th:if="${usuarioRegistrado != null}" th:text="${usuarioRegistrado}"></div>
+				<div class="alert alert-danger text-center" th:if="${param.error}">Credenciales incorrectas</div>
+	              <h2 class="fw-bold mb-2 text-uppercase text-center">Login</h2>  
+	              <p class="small mb-4 text-center">Rellene con su usuario y contraseña</p>          
+				  <form th:action="@{/signin}" method="POST">
+	              <div class="form-outline form-white mb-4">
+	              <label class="form-label" for="typeEmailX text-left">Usuario: </label>
+	                <input type="text" name="username" id="typeEmailX" class="form-control form-control-lg" />
+	                
+	              </div>	
+	              <div class="form-outline form-white mb-2 text-left">
+	              <label class="form-label" for="typePasswordX">Contraseña:</label>
+	                <input type="password" name="password" id="typePasswordX" autocomplete="off" class="form-control form-control-lg" />
+	                
+	              </div>              
+	
+	              <p class="small mb-4 pb-lg-2"><a class="text-white-50 text-center" href="#!">Olvido su contraseña?</a></p>
+					<div class="text-center">
+	              <button class="btn btn-outline-light btn-lg px-5" type="submit">Iniciar Sesion</button> </div>           
+				</form>
+	            </div>
+	
+	            <div class="text-center">
+	              <p class="mb-4">No tienes cuenta? <a th:href="@{/usuario/registro}" class="text-white-50 fw-bold">Registrarse</a>
+	              </p>
+	            </div>
+	
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</section>
+	
+	<footer th:replace="layouts/base-layout :: footer"></footer>
+</body>
+</html>

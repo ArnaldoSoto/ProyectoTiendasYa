@@ -1,0 +1,48 @@
+*{
+	font-family: 'Roboto', sans-serif;
+}
+
+.film-container{
+	display:grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-auto-rows:400px;
+	margin:40px auto;
+	justify-content:center;
+	padding-left:14%;
+	
+}
+.letra-conta{
+	margin:10px auto;
+	padding-top:10px;
+}
+.bg-azul {
+  background-color: #15598A !important;
+}
+
+.galery-item{
+	object-fit:cover;
+	justify-content:center;
+}
+
+img{
+	border-radius:3px;
+	width:250px;
+}
+h4{
+	padding-top:10px;
+	text-align: center;
+}
+
+.edit-actor{
+	text-decoration:none;
+	font-style:italic;
+	margin-left:2px;
+}
+
+.title{
+	margin-left:13%;
+}
+
+
+
+

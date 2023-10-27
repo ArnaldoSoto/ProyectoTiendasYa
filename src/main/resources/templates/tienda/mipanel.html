@@ -1,0 +1,86 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<head th:replace="layouts/base-layout :: head"></head>
+
+<body>
+	<nav th:replace="layouts/base-layout2 :: nav"></nav>
+	    <div class="product-big-title-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="product-bit-title text-center">
+                        <h2>Mi Panel</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	 <div class="single-product-area">
+        <div class="zigzag-bottom"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="single-sidebar">
+                        <h2 class="sidebar-title">Gestion</h2>
+                        <ul>
+                            <li ><a  class="active" th:href="@{/tienda/mi-panel}">Mi Perfil</a></li>
+                            <li><a th:href="@{/tienda/pren-form}">Productos</a></li>
+                            <li><a href="">Visitas</a></li>
+                            <li><a href="">Informacion</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-10">
+
+                    <div class="product-content-right">
+                        <div class="product-breadcroumb">
+                            <a href="#">Mi Panel</a>
+                            <a href="#">Mi Perfil</a>
+                            <a href="#">Editar Perfil</a>
+                        </div>
+                        <div>
+						<h1 class="text-center">Editar Perfil de Tienda</h1>
+						<!-- <form th:action="@{/usuario/editar-perfil}" th:object="${usuario}" method="POST" >	 -->
+                        <form method="POST" >               
+                         								
+						<div class="form-group my-2">
+						<label>Nombre de Tienda:</label>
+							<input type="text"  class="form-control" placeholder="Escriba el Nombre de Tienda" />
+						</div>
+						<div class="form-group my-2">
+						<label>Descripcion:</label>
+							<textarea class="form-control" placeholder="Descripcion" ></textarea>
+						</div>
+						<div class="form-group my-2">
+						<label>Celular o Telefono:</label>
+							<input type="number"  class="form-control" placeholder="Numero de Celular" />
+						</div>
+
+						<div class="form-group my-2">
+						<label>Direccion:</label>
+							<input type="text"  class="form-control" placeholder="Direccion" />
+						</div>	
+						<div class="form-group my-2">
+						<label>Ciudad:</label>
+							<input type="text"  class="form-control" placeholder="Direccion" />
+						</div>		
+							
+						<div class="form-group my-2">						
+							<button type="submit" class="btn btn-primary form-control" >Editar</button>
+						</div>			
+						
+						</form>                        
+                        </div>
+                        <div class="related-products-wrapper">
+                            <h2 class="related-products-title">a</h2>
+                            <div class="related-products-carousel">
+                            </div>
+                         </div> 
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+	<footer th:replace="layouts/base-layout :: footer"></footer>
+</body>
+</html>
